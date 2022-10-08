@@ -40,10 +40,14 @@ export const Booking = styled.div`
 
       input, select {
         width: 20rem;
-        border: none;
-        background-color: white;
+        border: 1px solid #cccc;
+        background-color: #fffb;
         padding: 1.2rem;
         border-radius: 0.5rem;
+
+        &:focus {
+          outline: 1px solid var(--blue-dark);
+        }
       }
     }
 

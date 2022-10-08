@@ -5,6 +5,7 @@ export const GlobalStyle = createGlobalStyle`
     font-size: 62.5%;
     --blue-dark: #193A6A;
     --blue-light: #182B47;
+    --card-text: #1C103B;
   }
 
   * {

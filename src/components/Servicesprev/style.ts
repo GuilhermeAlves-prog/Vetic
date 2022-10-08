@@ -45,9 +45,11 @@ export const Servicescard = styled.div`
     &:hover {
       border-color: var(--blue-dark);
 
+
       img {
         border: 2px solid transparent;
         animation-name: bord;
+        animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
         animation-duration: .8s;
         animation-iteration-count: 1;
         animation-fill-mode: forwards;

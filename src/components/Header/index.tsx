@@ -17,10 +17,10 @@ export function Header() {
  
 
         <ul>
-          <li><a href="">Home</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="">Gallery</a></li>
-          <li><a href="">Blog</a></li>
+          <li><a href="#">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#galery">Gallery</a></li>
+          <li><a href="#">Blog</a></li>
           <li><a href="#book">Book Appointment</a></li>
         </ul>
       </nav>
