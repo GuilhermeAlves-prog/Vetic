@@ -11,6 +11,7 @@ export const Container = styled.section`
     color: var(--blue-dark);
     font-size: 1.6rem;
     font-weight: bold;
+    text-transform: uppercase;
   }
    h2 {
     font-size: 4.6rem;
