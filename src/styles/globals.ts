@@ -13,7 +13,10 @@ export const GlobalStyle = createGlobalStyle`
     padding:0;
     box-sizing: border-box;
   }
-
+  html {
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+  }
   body {
     font-size: 1.6rem;
   }
