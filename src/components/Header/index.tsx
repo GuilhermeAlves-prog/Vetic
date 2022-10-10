@@ -1,31 +1,69 @@
-import { HeaderNavegation } from "./style"
+import { HeaderNavegation, NavegationMobile } from "./style"
 import { Main } from "../Main"
 
-
+import openIMG from '../../assets/menu.svg'
+import closeIMG from '../../assets/close.svg'
 import logoimg from '../../assets/logo.svg'
+import { useState } from "react"
 
 
 
 export function Header() {
+  const [isOpen, setIsOpen] = useState(false)
+  const [menuIMG, setMenuIMG] = useState(openIMG)
+
+  function handleOpenMenu() {
+    if (isOpen) {
+      setIsOpen(false)
+      setMenuIMG(openIMG)
+    } else {
+      setIsOpen(true)
+      setMenuIMG(closeIMG)
+    }
+  }
 
   return (
-    <HeaderNavegation>
-      <nav>
-        <a href="">
-        <img src={logoimg} alt="logo" />
-        </a>
- 
+    <>
+      <NavegationMobile
+      isOpen={isOpen}
+      >
+        <div className="logo">
+          <a href="">
+            <img src={logoimg} alt="logo" />
+          </a>
+          <button onClick={handleOpenMenu}>
+            <img src={menuIMG} alt="menu" />
+          </button>
 
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#galery">Gallery</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#book">Book Appointment</a></li>
-        </ul>
-      </nav>
 
-      <Main />
-    </HeaderNavegation>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#galery">Gallery</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#book">Book Appointment</a></li>
+          </ul>
+        </nav>
+      </NavegationMobile>
+      <HeaderNavegation>
+        <nav>
+          <a href="">
+            <img src={logoimg} alt="logo" />
+          </a>
+
+
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#galery">Gallery</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#book">Book Appointment</a></li>
+          </ul>
+        </nav>
+        <Main />
+      </HeaderNavegation>
+    </>
   )
 } 

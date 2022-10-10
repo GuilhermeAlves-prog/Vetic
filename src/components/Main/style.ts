@@ -3,8 +3,12 @@ import styled from "styled-components";
 export const MainContent = styled.main`
   margin-top: 6.5rem;
   display: flex;
+  justify-content: center;
 
   .dog {
+    @media (max-width: 780px) {
+      display: none;
+}
     width: 400px;
     padding: 5px;
 
@@ -24,6 +28,9 @@ export const MainContent = styled.main`
   }
 
  .apresentation {
+  @media (max-width: 780px) {
+    width: 90%;
+}
     text-align: center;
     width: 45%;
     padding: 5px;
@@ -63,6 +70,9 @@ export const MainContent = styled.main`
     }
   }
   .cat {
+    @media (max-width: 1100px) {
+      display: none;
+}
     width: 350px;
     background-color: #FDF1E9;
 

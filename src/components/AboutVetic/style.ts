@@ -7,6 +7,11 @@ export const Container = styled.section`
   margin-top: 17rem;
   gap: 7rem;
   
+   @media (max-width: 780px) {
+    grid-template-columns: 1fr;
+    margin-top: 4rem;
+   }
+  
   h3 {
     font-size: 4.6rem;
     line-height: 4.6rem;

@@ -4,6 +4,10 @@ export const Container = styled.div`
   margin-top: 16rem;
   margin-bottom: 19rem;
 
+  @media (max-width: 1100px) {
+    display: none;
+   }
+
 
   span:first-child {
     text-transform: uppercase;

@@ -2,7 +2,10 @@ import styled from "styled-components";
 
 import BgImage from '../../assets/bg-services.png'
 
-export const Container = styled.div` 
+export const Container = styled.div`
+ @media (max-width: 780px) {
+    display: none;
+   }
   position :relative ;
   display: flex;
   height: 70rem;

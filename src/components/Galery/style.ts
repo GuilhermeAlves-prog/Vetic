@@ -1,6 +1,9 @@
 import styled from "styled-components";
 
 export const Container = styled.section`
+   @media (max-width: 780px) {
+    margin-top: 6rem;
+   }
   padding: 1rem 8rem;
   margin-top: 17rem;
   text-align: center;
@@ -28,6 +31,7 @@ export const Container = styled.section`
 
   div {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 3rem;
     margin-top: 3rem;
@@ -35,6 +39,10 @@ export const Container = styled.section`
     img {
       width: 30%;
       transition: all 0.2s cubic-bezier(0.47, 0, 0.745, 0.715);
+
+      @media (max-width: 780px) {
+        width: 40%;
+   }
 
       &:hover {
         transform: scale(1.04);

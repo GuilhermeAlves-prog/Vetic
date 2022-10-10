@@ -5,10 +5,14 @@ export const HeaderNavegation = styled.header `
   min-height: 780px;
   
   nav {
+    @media (max-width: 1080px) {
+      display: none;
+}
     display: flex;
     align-items: center;
     padding-left: 10rem;
     gap: 15rem;
+
     ul {
       display: flex;
       list-style: none;
@@ -28,5 +32,55 @@ export const HeaderNavegation = styled.header `
         }
       }
     }
+  }
+`
+interface NavegationMobileProps {
+  isOpen: boolean;
+}
+
+export const NavegationMobile = styled.header<NavegationMobileProps>`
+  padding: 2rem 4rem;
+   @media (min-width: 1080px) {
+      display: none;
+   }
+
+   div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    button {
+      border: none;
+      border-radius: 0.8rem;
+      background: none;
+      cursor: pointer;
+
+      img {
+        width: 60px;
+      }
+    }
+   }
+  nav {
+    position: absolute;
+    left: 0;
+    right: 0;
+    display: ${(props) => props.isOpen ? 'block' : 'none'};
+  }
+
+  ul {
+    list-style: none;
+  }
+  li {
+    background-color: var(--blue-dark);
+    padding: 2rem;
+    text-align: center;
+  }
+  li + li {
+
+  }
+  a {
+    text-decoration: none;
+    color: white;
+    padding: 2rem;
   }
 `

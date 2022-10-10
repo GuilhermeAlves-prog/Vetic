@@ -1,6 +1,10 @@
 import styled from "styled-components";
 
 export const Booking = styled.div`
+
+@media (max-width: 1080px) {
+  display: none;
+}
   display: flex;
   flex-direction: column;
   padding: 1rem 4rem;

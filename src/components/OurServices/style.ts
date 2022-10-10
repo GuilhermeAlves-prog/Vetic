@@ -7,6 +7,11 @@ export const Container = styled.section`
   margin-top: 15rem;
   padding: 1rem 8rem;
 
+  @media (max-width: 1114px) {
+    padding: 1rem 0 1rem 1rem;
+    margin-top: 4rem;
+   }
+
   span {
     color: var(--blue-dark);
     font-size: 1.6rem;
@@ -25,7 +30,17 @@ export const Container = styled.section`
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 3rem;
+
+    @media (max-width: 1114px) {
+    grid-template-columns: 1fr 1fr;
    }
+
+   @media (max-width: 780px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   }
+  }
 `
 
 export const Card = styled.div`
@@ -94,4 +109,5 @@ export const Card = styled.div`
       color: #FFF;
     }
   }
+
 `

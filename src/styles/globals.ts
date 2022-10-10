@@ -24,4 +24,8 @@ export const GlobalStyle = createGlobalStyle`
   body, button, input {
     font-family: 'Nunito', sans-serif;
   }
+
+  button:hover {
+    filter: brightness(0.9);
+  }
 `
