@@ -7,9 +7,14 @@ import whitedogIMG from '../../assets/whitedog.png'
 import yellowdogIMG from '../../assets/yellowdog.png'
 import catanddogIMG from '../../assets/catanddog.png'
 import bgIMG from  '../../assets/bg-galery.png'
+import { useState } from "react"
 
+interface GaleryProps {
+  scroolPosition: number;
+}
 
-export function Galery() {
+export function Galery({scroolPosition}:GaleryProps) {
+
   return (
     <Container id="galery">
       <BG src={bgIMG}/>
@@ -17,7 +22,7 @@ export function Galery() {
       <h4>Our Gallery</h4>
       <p>Our Client Pets, as well as a Gallery with some nice pictures.</p>
 
-      <div>
+      <div className={scroolPosition >= 2445 && scroolPosition < 3000 ? 'animate__animated animate__fadeInLeft' ?? scroolPosition >= 3200 ?? 'animate__animated animate__fadeInLeft' : ''}>
         <img src={cat3IMG} alt="cat" />
         <img src={dogglassIMG} alt="dog" />
         <img src={whitedogIMG} alt="dog" />

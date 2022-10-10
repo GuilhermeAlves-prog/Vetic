@@ -48,12 +48,16 @@ export const NavegationMobile = styled.header<NavegationMobileProps>`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 
     button {
       border: none;
       border-radius: 0.8rem;
       background: none;
       cursor: pointer;
+      position: absolute;
+      right: 0;
+      z-index: 999;
 
       img {
         width: 60px;
@@ -62,9 +66,12 @@ export const NavegationMobile = styled.header<NavegationMobileProps>`
    }
   nav {
     position: absolute;
+    z-index: 2;
+    top: 0;
     left: 0;
     right: 0;
-    display: ${(props) => props.isOpen ? 'block' : 'none'};
+    transition: all .2s;
+    visibility: ${(props) => props.isOpen ? 'visible' : 'hidden'};
   }
 
   ul {

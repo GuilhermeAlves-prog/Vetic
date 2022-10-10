@@ -6,15 +6,20 @@ import vacinnaIMG from '../../assets/vacinna.svg'
 import surgeriesIMG from '../../assets/surgeries.svg'
 import boneIMG from '../../assets/bone.svg'
 import emergencyIMG from '../../assets/emergency.svg'
+import { useState } from "react"
 
+interface ServicesProps {
+  scroolPosition: number;
+}
 
-export function OurServices() {
+export function OurServices({scroolPosition}: ServicesProps) {
+
   return (
     <Container id="services">
       <span>OUR SERVICES</span>
       <h2>All Pet Care Services</h2>
 
-      <div className="cardwrapper">
+      <div className={scroolPosition>= 726 ? 'cardwrapper animate__animated animate__fadeInLeft' : 'cardwrapper'}>
 
         <Card>
           <div>

@@ -6,19 +6,21 @@ import imgcat from '../../assets/cat1.png'
 import yellowpawimg from '../../assets/paw-btn.svg'
 import bgleft from '../../assets/bg-left.png'
 import bgheaderimg from '../../assets/bg-main.png'
-
-
-
+import { useState } from "react";
 
 export function Main() {
+
+  const [animation, setAnimation] = useState('')
   return (
-    <MainContent>
-      <div className="dog">
+    <MainContent onLoad={()=> {
+        setAnimation('animate__animated');
+      }}>
+      <div className={`dog ${animation} animate__backInLeft`}>
         <img className="bg-image" src={bgleft} alt="background" />
         <img src={imgdog} alt="dog" />
       </div>
 
-      <div className="apresentation">
+      <div className={`apresentation ${animation} animate__zoomIn animate__delay-1s`}>
         <h1>The World's Best Team for Pet Care Services</h1>
         <p>
           Vetic is India’s first tech-integrated chain of modern clinics to cater to all
@@ -34,7 +36,7 @@ export function Main() {
         <Cards />
       </div>
 
-      <div className="cat">
+      <div className={`cat ${animation} animate__backInRight`}>
         <img src={imgcat} alt="cat" />
       </div>
     </MainContent>

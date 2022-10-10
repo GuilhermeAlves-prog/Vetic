@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react'
 import { About } from './components/AboutVetic'
 import { BookingAppointment } from './components/BookingAppointment'
 import { ClientReviews } from './components/ClientReviews'
@@ -10,14 +11,20 @@ import { GlobalStyle } from './styles/globals'
 
 
 function App() {
+  const [scrooly, setScroolY] = useState(0)
+
+  document.onscroll = () => {
+    setScroolY(document.documentElement.scrollTop)
+    console.log(scrooly)
+  }
   return (
     <>
-      <GlobalStyle />
+      <GlobalStyle/>
       <Header />
       <BookingAppointment />
-      <OurServices />
+      <OurServices scroolPosition={scrooly}/>
       <About />
-      <Galery />
+      <Galery scroolPosition={scrooly}/>
       <ClientReviews />
       <Grooming />
       <Footer />

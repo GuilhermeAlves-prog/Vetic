@@ -53,7 +53,7 @@ export const Card = styled.div`
   padding: 4rem 4rem 2rem 4rem;
   max-width: 44rem;
   text-align: left;
-  transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: background 0.6s ease-in;
 
  
 
