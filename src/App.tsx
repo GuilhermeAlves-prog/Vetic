@@ -2,6 +2,7 @@ import { About } from './components/AboutVetic'
 import { BookingAppointment } from './components/BookingAppointment'
 import { ClientReviews } from './components/ClientReviews'
 import { Galery } from './components/Galery'
+import { Grooming } from './components/GroomingService'
 import { Header } from './components/Header'
 import { OurServices } from './components/OurServices'
 import { GlobalStyle } from './styles/globals'
@@ -17,6 +18,7 @@ function App() {
       <About />
       <Galery />
       <ClientReviews />
+      <Grooming />
     </>
   )
 }
