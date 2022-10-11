@@ -2,7 +2,7 @@
 
 ## About
 
-vetic is a SPA created with React, in this application I improved my knowledge about useState , props, styled components, scrool animation, used the animate.css lib to add animations to the site, and made the site responsive for devices.
+vetic is a Page created with React, in this application I improved my knowledge about useState , props, styled components, scrool animation, used the animate.css lib to add animations to the site, and made the site responsive for devices.
 
 ## Tools
 - figma
