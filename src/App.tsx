@@ -21,8 +21,6 @@ function App() {
       <OurServices/>
       <About />
       <Galery />
-
-
       <ClientReviews />
       <Grooming />
       <Footer />
