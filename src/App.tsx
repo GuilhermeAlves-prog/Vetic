@@ -1,4 +1,6 @@
 import { useEffect, useState } from 'react'
+import { InView, useInView } from 'react-intersection-observer';
+
 import { About } from './components/AboutVetic'
 import { BookingAppointment } from './components/BookingAppointment'
 import { ClientReviews } from './components/ClientReviews'
@@ -11,20 +13,16 @@ import { GlobalStyle } from './styles/globals'
 
 
 function App() {
-  const [scrooly, setScroolY] = useState(0)
-
-  document.onscroll = () => {
-    setScroolY(document.documentElement.scrollTop)
-    console.log(scrooly)
-  }
   return (
     <>
-      <GlobalStyle/>
+      <GlobalStyle />
       <Header />
       <BookingAppointment />
-      <OurServices scroolPosition={scrooly}/>
+      <OurServices/>
       <About />
-      <Galery scroolPosition={scrooly}/>
+      <Galery />
+
+
       <ClientReviews />
       <Grooming />
       <Footer />

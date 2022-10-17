@@ -1,4 +1,5 @@
 import { Card, Container } from "./style"
+import { InView, useInView } from 'react-intersection-observer';
 
 import consultationIMG from '../../assets/consultation.svg'
 import petgroomingIMG from '../../assets/petgrooming.svg'
@@ -6,20 +7,22 @@ import vacinnaIMG from '../../assets/vacinna.svg'
 import surgeriesIMG from '../../assets/surgeries.svg'
 import boneIMG from '../../assets/bone.svg'
 import emergencyIMG from '../../assets/emergency.svg'
-import { useState } from "react"
+import { RefObject, useEffect, useState } from "react"
 
-interface ServicesProps {
-  scroolPosition: number;
-}
 
-export function OurServices({scroolPosition}: ServicesProps) {
+
+export function OurServices() {
+  
+  const { ref, inView, entry } = useInView({
+    threshold: 0,
+  });
 
   return (
-    <Container id="services">
+    <Container id="services" ref={ref}>
       <span>OUR SERVICES</span>
       <h2>All Pet Care Services</h2>
 
-      <div className={scroolPosition>= 726 ? 'cardwrapper animate__animated animate__fadeInLeft' : 'cardwrapper'}>
+      <div className={ inView ? 'cardwrapper animate__animated animate__fadeInLeft' : 'cardwrapper'}>
 
         <Card>
           <div>
