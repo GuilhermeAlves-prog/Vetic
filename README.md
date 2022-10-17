@@ -10,6 +10,7 @@ vetic is a Page created with React, in this application I improved my knowledge 
 - typescript
 - styled-components
 - animate.css
+- [react-intersection-observer](https://github.com/thebuilder/react-intersection-observer)
 
 ### how to install
 
