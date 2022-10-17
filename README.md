@@ -3,6 +3,9 @@
 ## About
 
 vetic is a Page created with React, in this application I improved my knowledge about useState , props, styled components, scrool animation, used the animate.css lib to add animations to the site, and made the site responsive for devices.
+# Build 
+[click to view webpage](https://vetic.netlify.app/)
+
 
 ## Tools
 - figma
