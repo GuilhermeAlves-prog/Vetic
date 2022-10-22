@@ -18,7 +18,7 @@ vetic is a Page created with React, in this application I improved my knowledge 
 ### how to install
 
 ```sh
-$ git clone https://github.com/GuilhermeAlves-prog/Vetic
+$ git clone https://github.com/guialvess/Vetic
 ```
 ```sh
 $ yarn install
